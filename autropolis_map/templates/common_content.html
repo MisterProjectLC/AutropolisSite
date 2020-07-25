@@ -10,15 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="icon" href="{% static 'Images/Autropolis.jpg' %}">
+
+    {% block icon %}
+    <link rel="icon" type="image/x-icon" href="{% static 'Images/favicon.ico' %}">
+    {% endblock %}
 </head>
 
 <body>
     <main>
-        <h1>CÉUS DE AUTRÓPOLIS</h1>
+        <h1 style="margin-top:10px">CÉUS DE AUTRÓPOLIS</h1>
         <p id="center">Um jogo para 3-9 jogadores sobre superheróis, com controle de área, diplomacia e estratégia.</p>
     </main>
-
     {% block content %}{% endblock %}
 </body>
 </html>

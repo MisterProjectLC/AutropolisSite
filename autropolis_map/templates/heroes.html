@@ -6,6 +6,10 @@
 <title>Autropolis - Heróis</title>
 {%endblock %}
 
+{% block icon %}
+<link rel="icon" href="{% static 'Images/favicon.ico' %}">
+{% endblock %}
+
 {% block content %}
 <div class="gallery">
     <a href="{% url 'index' %}">
