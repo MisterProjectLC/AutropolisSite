@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = [
-    'https://autropolis-map.herokuapp.com/',
+    'autropolis-map.herokuapp.com',
     ]
 
 
