@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    {% block title %}
+    <title>Autropolis</title>
+    {% endblock %}
+    <meta charset="utf-8">
+    <meta name="author" content="Dan Isamu">
+    <meta name="description" content="Regras e Referência para o Megagame Autropolis">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'Images/Autropolis.jpg' %}">
+</head>
+
+<body>
+    <main>
+        <h1>CÉUS DE AUTRÓPOLIS</h1>
+        <p id="center">Um jogo para 3-9 jogadores sobre superheróis, com controle de área, diplomacia e estratégia.</p>
+    </main>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

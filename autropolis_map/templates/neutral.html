@@ -1,0 +1,166 @@
+﻿{% extends "common_content.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>Autropolis - Neutral</title>
+{%endblock %}
+
+{% block content %}
+<div class="gallery">
+    <a href="{% url 'page' 'heroes' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Heróis</p>
+            </div>
+            <img src="{% static 'Images/Heroes.jpg' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'index' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Regras</p>
+            </div>
+            <img src="{% static 'Images/Autropolis.jpg' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'villains' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Vilões</p>
+            </div>
+            <img src="{% static 'Images/Villains.png' %}">
+        </div>
+    </a>
+</div>
+
+
+<div class="wrap">
+    <h2>NEUTROS</h2>
+    <p class="super">
+        <i>
+            Onde alguns vêem perigo, outros vêem oportunidade. Livres de lealdades ou alianças, estes Supers mantém-se neutros do grande conflito, preferindo por seguir
+            seus próprios objetivos. Como peças voláteis neste xadrez decisivo, os Neutros podem segurar todas as cartas... ou perdê-las com um único golpe.<br>
+            "O leão e o elefante podem ser mais poderosos, mas o lobo não dança no circo."<br>
+        </i>
+    </p>
+    <button class="toggle">Esconder Lore</button>
+    <script src="{% static 'script.js' %}" defer></script>
+
+    <h3>Espadachim</h3>
+    <p class="super">
+        1P inicial.<br>
+        2 Combate, 4 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Lua Cheia [I] (+1P quando não contratado)<br>
+        <i>Espadachim sempre lutou por seus próprios ideais de honra.<br></i>
+        <strong>Ideais:</strong><br>
+        -Independente (+1 Combate quando sozinho)<br>
+        <i>Antes de chegar a Autrópolis, o samurai era um viajante que lutou por sua vida inumeras vezes.<br></i>
+        -Samurai (+1 Reflexos)<br>
+        <i>O mestre de Espadachim o ensinou as artes de combate mais complexas, mas o Super prefere as simples.<br></i>
+        -Sangue (+5P ao causar Ruína)<br>
+        <i>Ser derrotado e morrer em duelo é honroso. Vencer e matar, mais ainda.<br></i>
+        <strong>Poderes:</strong><br>
+        -Katana (Combate: Ataque com dois dados - escolha o maior)<br>
+        <i>A espada japonesa não é a mais danosa - mas uma das mais precisas.<br></i>
+        -Honra (Combate: se alvo anunciar Fuga, anula-a e causa 1 ferimento)<br>
+        <i>Na cultura samurai, fugir de um embate é uma vergonha não só para o guerreiro, mas para sua própria família.<br></i>
+        -Ki Interior (Combate: cura 1 ferimento de si)<br>
+        <i>Sua vila natal foi assassinada, mas seus ensinamentos sobre o ki continuam na mente de Espadachim.<br></i>
+        -Ronin (Planejamento: segue um Super)<br>
+        <i>Ao descobrir a verdade sobre seu mestre, Espadachim tentou, em vão, destruí-lo. <br></i>
+        <strong>Superpoder:</strong><br>
+        -Morte Rápida (Combate: Não gasta Ação. Usável apenas na primeira rodada, contra alvos no mesmo Local. Caso você vença este Combate,
+        Super-Alvo é arruinado. Pode gastar 4P adicionais para ativar secretamente)<br>
+        <i>Espadachim traz derrota àqueles que não respeita. Aos que respeita, ele traz a morte.<br></i>
+    </p>
+
+    <h3>Cibernético</h3>
+    <p class="super">
+        2P inicial.<br>
+        2 Combate, 5 Bravado, 0 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Contrato [I] (Ganha 1P a mais por contrato)<br>
+        <i>Originalmente, Cibernético foi criado para trabalhar às ordens dos Heróis.<br></i>
+        <strong>Ideais:</strong><br>
+        -Tiro Supressor (+2 Reflexos quando acompanhado)<br>
+        <i>A Inteligência Artificial de Cibernético foi criada para o auxiliar em combates maiores.<br></i>
+        -Guarda-Costas (+1 Bravado se estiver contra 2 ou mais Supers)<br>
+        <i>O ciborgue já foi um dos melhores em missões de escolta e resgate de reféns.<br></i>
+        -Experiência (+1P ao vencer combate)<br>
+        <i>"Oponente: Espadachim. Analisar banco de dados... Entendo. Então essa é sua fraqueza."<br></i>
+        <strong>Poderes:</strong><br>
+        -Mira (Combate: +1 Combate para si)<br>
+        <i>Um sistema automatizado que permite Cibernético enxergar melhor a silhueta de seus alvos.<br></i>
+        -Mercenário (Planejamento: +2P se vencer Combate no Banco)<br>
+        <i>Desiludido e sem perspectiva de vida, Cibernético passou a lutar para quem pague mais.<br></i>
+        -Negociação (Combate: não gasta Ação. Negocia Prestígio com uma equipe para encerrar o Combate contra essa equipe)<br>
+        <i>Dentre os Heróis, o único a tentar conversar e entender os Vilões foi Cibernético.<br></i>
+        -Armadura (Combate: Defesa imune a Previsão)<br>
+        <i>"Lutar é trivial. O problema é resistir à programação..."<br></i>
+        <strong>Superpoder:</strong><br>
+        -Máquina de Combate (Combate: vence o Combate e causa 1 Ferimento a todos os Supers no Local exceto si)<br>
+        <i>"Eu não queria ser só uma arma... Mas se vocês me obrigam, agirei como uma."<br></i>
+    </p>
+
+    <h3>Punho</h3>
+    <p class="super">
+        2P inicial.<br>
+        2 Combate, 5 Bravado, 0 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Influência [I] (Glória em locais neutros dá Prestígio que fica após Combate)<br>
+        <i>Após sair do laboratório de Dr. M, Punho chegou alto nas escadas do crime organizado.<br></i>
+        <strong>Ideais:</strong><br>
+        -Arruaceiro (+1 Reflexos)<br>
+        <i>Como uma criança de rua, é preciso ter agilidade para ganhar o pão de cada dia.<br></i>
+        -Deal with it (Cura 1 Ferimento de si)<br>
+        <i>"Nem doeu, babaca!"<br></i>
+        -Mafia (+1 Bravado em Local Neutro)<br>
+        <i>Por ser um dos chefes da máfia, Punho tem muitos criminosos à disposição.<br></i>
+        <strong>Poderes:</strong><br>
+        -Capanga (Planejamento: cria um NPC [-1/5/1] Acompanhante)<br>
+        <i>Na máfia, todos são irmãos e estão dispostos a dar suas vidas pela causa.<br></i>
+        -Criminoso (Planejamento: +1 Combate quando na Delegacia)<br>
+        <i>Antes de ser um Super, Punho foi preso e torturado na cadeia. Apenas sobreviveu por ter sido resgatado pelos Vilões. <br></i>
+        -Super-Soco (Combate: Ataque que retira Super do Local caso acertado)<br>
+        <i>Após os experimentos, Punho ficou maior, mais forte e ainda mais agressivo do que era antes.<br></i>
+        -Briguento (Combate: não gasta Ação. +1 Bravado para cada Local Neutro nesta rodada)<br>
+        <i>Por sua agressividade, Punho não fez parte dos vilões. Ao invés disso, deu as costas para Dr. M e montou seu próprio negócio. <br></i>
+        <strong>Superpoder:</strong><br>
+        -A Cidade é Nossa (Se ganhar, converte todos os locais para Neutro)<br>
+        <i>Certa vez, Punho foi derrotado pelos antigos Renegados e saiu do crime. Mas assim como alguns são viciados em drogas, Punho é viciado em poder.<br></i>
+    </p>
+
+    <h3>Júpiter</h3>
+    <p class="super">
+        5P inicial.<br>
+        0 Combate, 4 Bravado, 3 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Alien [I] (Objetivo extra: ter 4 NPCs diferentes vivos simultaneamente)<br>
+        <i>A missão de Júpiter na Terra é pesquisar sobre esses primatas chamados humanos. <br></i>
+        <strong>Ideais:</strong><br>
+        -Genoma (+2P temporário, usável apenas neste turno)<br>
+        <i>Para os jupiterianos, canalizar poder é algo quase trivial.<br></i>
+        -Curiosa (Segue um Super)<br>
+        <i>"Por que alguns humanos conseguem fazer coisas especiais e outros não? Hmm..."<br></i>
+        -Duplicação (Duplica um NPC)<br>
+        <i>"Um é bom. Dois é melhor ainda!" <br></i>
+        <strong>Poderes:</strong><br>
+        -Clonagem (Combate: cria um NPC Independente neste Local com os atributos do Super-Alvo. NPC permanece após o Combate e cura 1 Ferimento de si a cada Fase de Preparação)<br>
+        <i>"Uau! Você se multiplica! Ah, já sumiu? Eu consigo fazer bem mais caprichado..."<br></i>
+        -Experimento (Planejamento: Troca um Desastre para Heróico, Neutro ou Vilanesco neste turno)<br>
+        <i>Se os humanos se mostrarem dignos, a missão de Júpiter é comunicar àqueles de seu planeta para visitarem a Terra no futuro. <br></i>
+        -Abdução (Planejamento: puxa todos do Local-Alvo para seu Local)<br>
+        <i>A tecnologia alienígena permite um deslocamento muito mais eficiente do que a humana.<br></i>
+        -OVNI (Combate: Fuga que ocorre antes de Ataques)<br>
+        <i>"Os experimentos acabam por aqui! Mas obrigada pela cooperação!"<br></i>
+        <strong>Superpoder:</strong><br>
+        -Nave-Mãe (Planejamento: faz Clonagem de todos que forem para Local-Alvo)<br>
+        <i>"Quantos espécimes! Mamãe vai ficar tão orgulhosa!"<br></i>
+    </p>
+
+</div>
+{% endblock %}

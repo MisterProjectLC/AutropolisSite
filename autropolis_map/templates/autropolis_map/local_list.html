@@ -1,0 +1,51 @@
+﻿{% extends "common_content.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="gallery">
+    <a href="{% url 'page' 'heroes' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Heróis</p>
+            </div>
+            <img src="{% static 'Images/Heroes.jpg' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'neutral' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Neutros</p>
+            </div>
+            <img src="{% static 'Images/Neutral.png' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'villains' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Vilões</p>
+            </div>
+            <img src="{% static 'Images/Villains.png' %}">
+        </div>
+    </a>
+</div>
+
+{% if local_list %}
+<div class="wrap">
+    {% for local in local_list %}
+
+    <p>
+        <strong>
+            {{ local.nome }}: {{local.desastre}} ({{ local.territorio }})
+        </strong>
+    {% for visitor in local.visitors.all %}
+    <br>-{{ visitor.nome }}
+    {% endfor %}
+    </p>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

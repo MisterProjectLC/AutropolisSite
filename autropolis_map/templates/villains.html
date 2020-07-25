@@ -1,0 +1,289 @@
+﻿{% extends "common_content.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>Autropolis - Villains</title>
+{%endblock %}
+
+{% block content %}
+<div class="gallery">
+    <a href="{% url 'page' 'heroes' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Heróis</p>
+            </div>
+            <img src="{% static 'Images/Heroes.jpg' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'neutral' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Neutros</p>
+            </div>
+            <img src="{% static 'Images/Neutral.png' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'index' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Regras</p>
+            </div>
+            <img src="{% static 'Images/Autropolis.jpg' %}">
+        </div>
+    </a>
+</div>
+
+
+<div class="wrap">
+    <h2>VILÕES</h2>
+    <p class="super">
+        <i>
+            De bueiros escuros até prédios corporativos, de laboratórios suspeitos até templos satânicos... vilões estão por toda parte. Como um relógio incessante e persistente,
+            um novo plano de dominação borbulha entre risadas de capangas e conspirações de alto nível. Os céus de Autrópolis se enturvam novamente - e dessa vez, para sempre.<br>
+        </i>
+    </p>
+    <button class="toggle">Esconder Lore</button>
+    <script src="{% static 'script.js' %}" defer></script>
+
+
+    <h3>Dr. M</h3>
+    <p class="super">
+        4P inicial.<br>
+        0 Combate, 4 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Tecnologia [I] (+1P toda vez que conseguir uma Engenhoca)<br>
+        <i>Embora não possua recursos, Dr. M se lembra bem do projeto de sua máquina de destruição.<br></i>
+        <strong>Ideais:</strong><br>
+        -Seringa (Cura 1 Ferimento de qualquer Super)<br>
+        <i>"Tome, use isto. Vai reestruturar seus tecidos e devolver o sangue que perdeu."<br></i>
+        -Radar (Desastre em um Local é trocado para +1 Engenhoca enquanto
+        Dr. M estiver ali)<br>
+        <i>Um simples detector de metais não é o suficiente para encontrar algo tão complexo quanto as engenhocas.<br></i>
+        -Pesquisador (+1 Bravado no Laboratório)<br>
+        <i>Dr. M precisou realizar muitas pesquisas para construir sua máquina do tempo. <br></i>
+        <strong>Poderes:</strong><br>
+        -Choque (Combate: bloqueia Ação inimiga)<br>
+        <i>Para um homem do futuro, as armas atuais não passam de brinquedos simples. <br></i>
+        -Laser (Planejamento: +2 Combate quando no Laboratório)<br>
+        <i>Num laboratório, Dr. M pode construir o arsenal mais temível de todo o mundo. <br></i>
+        -Engenharia (Planejamento: Ao vencer em Local Vilanesco, produz 1
+        Engenhoca)<br>
+        <i>Antes dos alienígenas serem destruídos pelos humanos no futuro, Dr. M aprendeu muito com eles.<br></i>
+        -Implante (+1 Combate para um aliado no mesmo Local)<br>
+        <i>Depois que Dr. M lidar com os heróis, este implante será a chave para seu domínio.<br></i>
+        <strong>Superpoder:</strong><br>
+        Máquina Final (Planejamento: Consegue 2 Engenhocas)<br>
+        <i>"A humanidade precisa ser parada, pelo bem de toda a vida."<br></i>
+    </p>
+
+    <h3>Caótico</h3>
+    <p class="super">
+        0P inicial.<br>
+        2 Combate, 4 Bravado, 3 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Destruição [I] (+1 Combate em território Vilanesco)<br>
+        <i>Caótico e sua gangue viveram apenas para destruir e saquear - até que ele a destruiu também.<br></i>
+        -Arte do Caos [I] (+1P toda vez que causar Desastre)<br>
+        <i>Antes de ser submetido à influência de Dr. M, Caótico fora um brilhante engenheiro mecânico. <br></i>
+        <strong>Ideais:</strong><br>
+        -Alta Destruição (+1 Combate, -1 Bravado)<br>
+        <i>De tão obcecado com a destruição, Caótico não vê problema em destruir a si mesmo.<br></i>
+        -Volátil (Ao ativar Desastre em local Neutro, ativa o Desastre Vilanesco)<br>
+        <i>"Vamos colocar uma cereja nesse bolo!"<br></i>
+        -Nervos (+1 Reflexos)<br>
+        <i>Os experimentos de Dr. M quebraram a mente de Caótico, o tornando temerário e imprevisível.<br></i>
+        <strong>Poderes:</strong><br>
+        -Fuga Caótica (Combate: Fuga que ocorre antes de Ataques)<br>
+        <i>Um bom criminoso sempre tem um bom plano de fuga.<br></i>
+        -Assalto (Planejamento: +1 Combate quando no Banco)<br>
+        <i>"Me passem os malditos sacos de ouro agora ou eu mando tudo pelos ares!" <br></i>
+        -Bomba-Relógio (Combate: ataca o Local [Defesa 6] - se acertar, ativa o Desastre imediatamente)<br>
+        <i>"Uma prova andante dos males da humanidade, e de tudo que planejo conter. Mesmo assim, ele ainda tem seu propósito antes do fim."<br></i>
+        -Adeus (Planejamento: neste turno, se for levado à Ruína, causa 2 Ferimentos a todos no Local, inclusive aliados)<br>
+        <i>"ATIRA! ATIRA E VÊ O QUE ACONTECE!"<br></i>
+        <strong>Superpoder:</strong><br>
+        -Caos e Terror (Combate: +2 Combate durante esta batalha. Não perde Ação)<br>
+        <i>Um paraíso de fogo e ruínas é o que este vilão mais ansia.<br></i>
+    </p>
+
+    <h3>Penumbra</h3>
+    <p class="super">
+        2P inicial.<br>
+        0 Combate, 5 Bravado, 3 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Sombra [I] (+1 Reflexo se estiver em minoria) <br>
+        <i>Depois que os vilões foram formados, Penumbra se juntou a eles como sua sombra.<br></i>
+        <strong>Ideais:</strong><br>
+        -Retirada (Se Super-Alvo for para Local-Alvo, ele não vai para nenhum Local)<br>
+        <i>"Caótico tem uma visão tão simplista. Meu caos é deliberado, planejado, elegante. Basta retirar uma peça para o castelo ruir."<br></i>
+        -Mudo (Super-alvo não pode usar Poderes nem Super-Poderes de Combate)<br>
+        <i>Antes de perder a razão e as lembranças, a vilã desenvolveu este ideal para se vingar de seu usurpador.<br></i>
+        -Noturna (+1 Reflexo)<br>
+        <i>Em tempos imemoriais, Penumbra e Eclipse eram responsáveis pela manutenção das noites.<br></i>
+        <strong>Poderes:</strong><br>
+        -Escuridão (Combate: Fuga que ocorre antes de Ataques)<br>
+        <i>Com o tempo, Penumbra se corrompeu com a escuridão indistinta, e passou a ser uma com as trevas.<br></i>
+        -Infiltração (Planejamento: aliados têm um turno surpresa na Delegacia)<br>
+        <i>"Poder e hubris... Nada mais fácil de se envenenar."<br></i>
+        -Interceptar (Planejamento: você e Super-alvo não vão para nenhum Local)<br>
+        <i>Entre a luz e a sombra, existe a penumbra. Ninguém nunca escapou de seus pesadelos.<br></i>
+        -Obscurecer (Combate: toma Ação imune a Previsão)<br>
+        <i>"Padrões abstratos, dados vazios, verdades falsas. Como planeja prever um paradoxo?"<br></i>
+        <strong>Superpoder:</strong><br>
+        Noite Densa (Planejamento: Neste turno, todos os Supers inimigos anunciam primeiro
+        durante Combate)<br>
+        <i>"A certeza é um veneno. Apenas a noite pode libertar o mundo de sua prisão determinista..."<br></i>
+    </p>
+
+    <h3>Lucifer</h3>
+    <p class="super">
+        2P inicial.<br>
+        1 Combate, 6 Bravado, 0 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Maldição [II] (+1 Combate em Local Vilanesco)<br>
+        <i>Lucifer não escolheu ser um demônio - ele foi amaldiçoado.<br></i>
+        <strong>Ideais:</strong><br>
+        -Demônios (NPC [-1/3/2] Independente em Local-Alvo Vilanesco)<br>
+        <i>Não basta força bruta; para tomar um universo, você precisa de um exército.<br></i>
+        -Expansão (+1 Combate em Local Neutro ou Heróico)<br>
+        <i>Lucifer realizou um pacto com Quântico para que pudesse sair novamente do inferno e conquistar o mundo exterior.<br></i>
+        -Conversão (Converte local Heróico para Neutro no início da Fase de Planejamento)<br>
+        <i>Em sua forma humana, Lucifer é o homem mais persuasivo do mundo.<br></i>
+        <strong>Poderes:</strong><br>
+        -Reinado (Combate: -3 Bravado. Se estiver em Local Neutro, converte Local para Vilanesco caso não leve Ferimento nesta
+        rodada)<br>
+        <i>"Não aceitarei nada menos que obediência completa."<br></i>
+        -Sacrifício (Combate: age 2 vezes nesta rodada, mas transforma Local Vilanesco em Neutro)<br>
+        <i>Lucifer, desesperado mediante uma derrota, já sacrificou seu poder na Terra para sobreviver.<br></i>
+        -Violência (Combate: se estiver no Governo, faz Ataque que causa 2 Ferimentos se acertado)<br>
+        <i>Para conseguir poder sobre o governo humano, o vilão sempre recorreu às formas mais sujas de violência.<br></i>
+        -Servos (Planejamento: NPC [0/3/2] Independente em Local-Alvo Vilanesco)<br>
+        <i>Sua primeira derrota veio de um de seus próprios servos. Lucifer nunca mais cometeu o erro de subestimá-los. <br></i>
+        <strong>Superpoder:</strong><br>
+        Inferno na Terra (Planejamento: converte 3 Locais no início da Fase de Combate)<br>
+        <i>"Dessa vez, este mundo será meu, e vocês, meus escravos." <br></i>
+    </p>
+
+    <h3>Óbito</h3>
+    <p class="super">
+        4P inicial.<br>
+        0 Combate, 5 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Missão [II] (+1 Combate atacando missões)<br>
+        <i>Antes de se tornar Vilão, Óbito foi um famoso assassino em série.<br></i>
+        <strong>Ideais:</strong><br>
+        -Decisivo (+1 Combate em Ataques contra Supers com missões abertas)<br>
+        <i>Talvez a obsessão de Óbito com o silêncio seja o motivo para seu único amigo ser Calafrio.<br></i>
+        -Silencioso (+1 Combate em missão)<br>
+        <i>Após ser morto, Lucifer permitiu que Óbito voltasse à Terra, contanto que matasse para os Vilões.<br></i>
+        -Sadista (+1P ao completar missão)<br>
+        <i>A verdade é que Óbito só se aliou a Thri Fut para ver a dor dos heróis por si mesmo.<br></i>
+        <strong>Poderes:</strong><br>
+        -Paranoia (Planejamento: Super-Alvo não pode usar Poderes nem Super-Poderes de Combate)<br>
+        <i>"O que dói mais n-não é a dor... é a antecipação."<br></i>
+        -Invisível (Combate: Fuga que ocorre antes de Ataques)<br>
+        <i>Para um assassino, é necessário ser irrastreável para continuar na ativa.<br></i>
+        -Reticência (Planejamento: troca Desastre de Local-Alvo Vilanesco para "reduz Saúde de Super-Alvo em 1", enquanto Óbito estiver ali)<br>
+        <i>"Silêncio... F-Finalmente, silêncio..."<br></i>
+        -Faca (Combate: faz Ataque que causa 2 Ferimentos)<br>
+        <i>Óbito mantém a mesma faca envenenada que matou a filha de um dos heróis, como boa lembrança.<br></i>
+        <strong>Superpoder:</strong><br>
+        Frio Assassino (Planejamento: Desbloqueia 2 Missões)<br>
+        <i>"C-Cale a boca, garotinha. Você não q-quer acabar igual o R-Rex, quer?"<br></i>
+    </p>
+
+    <h3>Calafrio</h3>
+    <p class="super">
+        4P inicial.<br>
+        0 Combate, 5 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Sussurros [I] (Pode tomar uma Previsão grátis (que não concede ações extras) por rodada)<br>
+        <i>Calafrio quase não fala, mas seus sussurros paralisam até o mais bravo guerreiro com terror.<br></i>
+        <strong>Ideais:</strong><br>
+        -Foice (+2 Combate em defesa de missão)<br>
+        <i>Calafrio é controlado pelos Vilões como um meio de evitar as baixas do time.<br></i>
+        -Sopro (+1 Bravado)<br>
+        <i>Um pequeno sopro da vida que Calafrio em alguma existência já teve.<br></i>
+        -Espelhos (Defende quantas missões quiser)<br>
+        <i>Algo que não existe pode não existir em mais de um local ao mesmo tempo.<br></i>
+        <strong>Poderes:</strong><br>
+        -Espectro (Planejamento: NPC [0/4/1] Independente em defesa de missão)<br>
+        <i>Os fantasmas do passado também podem lutar.<br></i>
+        -Passado (Combate: cura 1 Ferimento de Super-Alvo no mesmo local)<br>
+        <i>Calafrio foi criado por um ser onipotente chamado Quântico, por meio de um contrato dos vilões para impedir a destruição do grupo. <br></i>
+        -Vazio (Combate: não gasta Ação. Super/NPC-Alvo precisa declarar sua Ação, mas fica imune a Previsão)<br>
+        <i>Em algum plano de existência, Calafrio foi o herói mais poderoso de todos, aquele que deveria destruir os vilões. Neste, é só um efeito colateral.<br></i>
+        -Memória (Planejamento: +2 Combate no Hospital)<br>
+        <i>"Ele... Ele tá chorando?"<br></i>
+        <strong>Superpoder:</strong><br>
+        Futuro Sombrio (Planejamento: todos os ferimentos em Calafrios são
+        removidos e aplicados em Super-Alvo)<br>
+        <i>Para Calafrio, coisas como passado, futuro e dor não existem. Ele só segue ordens.<br></i>
+    </p>
+
+    <h3>Eclipse</h3>
+    <p class="super">
+        5P inicial.<br>
+        2 Combate, 3 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Intocado [l] (+1 Combate quando está sem nenhum Ferimento)<br>
+        <i>A imagem de um deus é sagrada, e intocada deve permanecer.<br></i>
+        -Magia [l] (+1P temporário na Fase de Combate)<br>
+        <i>Afinidades mágicas são um dos atributos dos deuses antigos.<br></i>
+        <strong>Ideais:</strong><br>
+        -Antigo (Cura 1 Ferimento de si)<br>
+        <i>Há séculos que Eclipse engana a morte... até que Cronos tomou conhecimento de suas ciladas.<br></i>
+        -Espelhado (Pode usar Cópia Lunar de graça uma vez neste turno)<br>
+        <i>Com cópias de si mesmo, Eclipse pôde observar o mundo e mudar seus eventos por muito tempo.<br></i>
+        -Ilusão (+2 Bravado em local Vilanesco)<br>
+        <i>"Tolice. Você não pode me acertar, tampouco me ver. Desista."<br></i>
+        <strong>Poderes:</strong><br>
+        -Cópia Lunar (Planejamento: envia um NPC Cópia de si mesmo para um Local - a Cópia pode ativar Poderes, mas não pode ativar vitória sozinha e dura 1 turno)<br>
+        <i>Assim como a Lua reflete a luz do Sol, um clone pode refletir o poder de Eclipse por um curto período.<br></i>
+        -Chuva de Flechas (Combate: ataca todos os oponentes no combate atual)<br>
+        <i>Para voltar a ser um semideus, Eclipse pretende fazer chover sangue o quanto for necessário.<br></i>
+        -Visão do Luar (Combate: durante um Combate em outro Local, faz um Ataque extra durante a rodada de um aliado)<br>
+        <i>Um disparo perfeito de um ângulo impossível. Foi o suficiente para derrubar a noite dos céus e a transformar em um ser mortal. <br></i>
+        -Luz Cegante (Combate: faz uma única Previsão contra inimigos que assumirem a Postura Ofensiva)<br>
+        <i>No único momento no qual Cronos não pôde ver, Eclipse desferiu um golpe que o partiu em mil pedaços e espalhou suas partes pelo mundo. <br></i>
+        <strong>Superpoder:</strong><br>
+        Lua Cheia (Planejamento: ativa Cópia Lunar duas vezes, que duram até serem mortas)<br>
+        <i>Eclipse decidiu que queria a noite inteira para ele. Nesse dia, a Lua transformou toda a escuridão em penumbra.<br></i>
+    </p>
+
+    <h3>Azrael</h3>
+    <p class="super">
+        4P inicial.<br>
+        1 Combate, 4 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Além do tempo [l] (Antes da Fase de Combate, vê quem foi no seu Local e troca de Local, se quiser)<br>
+        <i>O Olho permite a Azrael enxergar o futuro e evitar infortúnios que passaria.<br></i>
+        -Talentoso [I] (Treino não aumenta de custo)<br>
+        <i>"Ele fez parte daqueles Renegados. Se conseguiu chegar até aqui, deve ter muito talento."<br></i>
+        <strong>Ideais:</strong><br>
+        -Vingança (+1 Combate contra Heróis em território Heróico)<br>
+        <i>"Eles mataram meu irmão, roubaram seu Olho. Eu quero vingança. Simples assim."<br></i>
+        -Colete (+1 Bravado)<br>
+        <i>A maneira mais eficiente de proteger um corpo humano comum.<br></i>
+        -Olho (Ao usar Previsão, faz duas Previsões contra o mesmo alvo)<br>
+        <i>O irmão de Azrael possuía dois Olhos de Cronos, e o entregou um logo antes de morrer.<br></i>
+        <strong>Poderes:</strong><br>
+        -Cronos (Combate: não gasta turno. Usa Previsão)<br>
+        <i>Com o olho direito, Azrael consegue enxergar o futuro.<br></i>
+        -Aprendizado (Planejamento: Copia o Ideal escolhido de outro Super neste turno)<br>
+        <i>O Olho pode copiar qualquer ação e poder que observar.<br></i>
+        -Capoeira (Combate: Caso o alvo esteja usando Defesa, causa 2 Ferimentos contra ele)<br>
+        <i>Usando essa arte marcial, Azrael conseguiu enfrentar e vencer Punho quando fazia parte dos Renegados.<br></i>
+        -Chama Negra (Combate: -1 Bravado para o alvo)<br>
+        <i>"Feiticeira, eu sei o que você fez. E você vai pagar."<br></i>
+        <strong>Superpoder:</strong><br>
+        Anjo da Morte (Combate: A partir deste turno, +1 Bravado, +1 Reflexos, e Previsões são feitas contra todos inimigos)<br>
+        <i>Assim como as chamas negras, o Anjo da Morte é uma manifestação do ódio e rancor de Azrael pelos heróis.<br></i>
+    </p>
+
+
+</div>
+{% endblock %}

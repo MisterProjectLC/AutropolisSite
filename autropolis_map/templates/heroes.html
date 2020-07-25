@@ -1,0 +1,302 @@
+﻿{% extends "common_content.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>Autropolis - Heróis</title>
+{%endblock %}
+
+{% block content %}
+<div class="gallery">
+    <a href="{% url 'index' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Regras</p>
+            </div>
+            <img src="{% static 'Images/Autropolis.jpg' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'neutral' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Neutros</p>
+            </div>
+            <img src="{% static 'Images/Neutral.png' %}">
+        </div>
+    </a>
+
+    <a href="{% url 'page' 'villains' %}">
+        <div class="link">
+            <div class="overlay">
+                <p>Vilões</p>
+            </div>
+            <img src="{% static 'Images/Villains.png' %}">
+        </div>
+    </a>
+</div>
+
+
+<div class="wrap">
+    <h2>HERÓIS</h2>
+    <p class="super">
+        <i>
+            "Olhe para mim. Olhe para mim! Como você pode dizer que somos uma sombra dos velhos tempos? Nossa força não está em músculo ou tecnologia, mas em perseverança,
+            ferrenho e coragem. Enquanto a tocha ainda queimar, enquanto nossas ideias ainda persistirem... nós estaremos aqui. Talvez com outro nome, outro poder e outra
+            aparência - mas dentro de cada um de nós, existe a vontade de fazer o certo.<br>
+            É por isso que somos heróis. É por isso que somos humanos."<br>
+            -Chama, o Primeiro Herói
+            <br>
+        </i>
+    </p>
+    <button class="toggle">Esconder Lore</button>
+    <script src="{% static 'script.js' %}" defer></script>
+
+
+    <h3>Pacificador</h3>
+    <p class="super">
+        2P inicial.<br>
+        1 Combate, 5 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Duelista [II] (+1 Combate em 1v1)<br>
+        <i>É dito que antigamente Pacificador fora o melhor duelista da cidade.<br></i>
+        <strong>Ideais:</strong><br>
+        -Veterano (+1 Reflexos)<br>
+        <i>Embora velho e rabugento, Pacificador ainda tem a experiência ao seu lado.<br></i>
+        -Coragem (+1 Bravado em 1v2)<br>
+        <i>Nada é mais perigoso do que um homem sem nada a perder.<br></i>
+        -Justiça (+1 Combate em 1v1)<br>
+        <i>"Nada, nem ninguém, pode trazer ela de volta. Mas justiça será feita, custe o que custar!"<br></i>
+        <strong>Poderes:</strong><br>
+        -Missão Cumprida (Combate: se em 1v1, faz Ataque que causa 2 ferimentos)<br>
+        <i>"Ainda não morreu? Parece que estou enferrujado mesmo."<br></i>
+        -Segurança (Planejamento: +2 Reflexos para Heróis no Banco)<br>
+        <i>"Acha que eu deixaria vocês enriquecerem ao custo da minha cidade?"<br></i>
+        -Perseguição (Combate: se algum inimigo anunciar Fuga, anula-a e causa 1 ferimento)<br>
+        <i>Se não fosse a filha do Pacificador, Óbito teria fugido fácil. Mas ele mexeu com a família errada.<br></i>
+        -Tática (Combate: se em 1v1, toma uma Ação imune a Previsão)<br>
+        <i> Nem o olhar mais atento pode prever um plano perfeito.<br></i>
+        <strong>Superpoder:</strong><br>
+        Tiro Certeiro (Planejamento: Ruína garantida em Combate 1v1)<br>
+        <i>"Essa cidade é pequena demais para nós dois."<br></i>
+    </p>
+
+    <h3>Vigilante</h3>
+    <p class="super">
+        1P inicial.<br>
+        0 Combate, 5 Bravado, 3 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Vigia [I] (Sabe os Ideais dos Supers inimigos no Planejamento)<br>
+        <i>
+            Ele nunca mais se esqueceu do dia em que foi incapaz de ajudar seu amigo.
+            Seu trauma o levou a uma obsessão por saber tudo sobre todos.<br>
+        </i>
+        <strong>Ideais:</strong><br>
+        -Traços (Segue um Super)<br>
+        <i>"Graças à distração de Trovão, pude seguir Óbito com os outros naquele dia."<br></i>
+        -Preparado (Se Super-Alvo for para Local-Alvo, Super-Alvo não vai
+        para nenhum Local)<br>
+        <i>"Para pegar um rato, você precisa de uma ratoeira. Para pegar um urso, de uma armadilha. Não confunda os dois ou vamos morrer."<br></i>
+        -Alerta (Escolhe um Local. Se esse Local for atacado, descobre os
+        atacantes e pode redirecionar um Herói p/ ele)<br>
+        <i>Quando um lugar tem que ser defendido a todo custo, Vigilante é o herói certo para a tarefa.<br></i>
+        <strong>Poderes:</strong><br>
+        -Bomba de Fumaça (Combate: anula Ação inimiga)<br>
+        <i>Não importa o poder de um adversário se ele não acertar seu alvo. <br></i>
+        -Detetive (Planejamento: +1 Combate quando na Delegacia)<br>
+        <i>Antes de se tornar um herói, Vigilante fora um dos detetives mais ativos da cidade.<br></i>
+        -Proteção (Planejamento: Escolhe uma Missão. Se essa Missão for
+        atacada, pode redirecionar um Herói p/ ela)<br>
+        <i>Para o Vigilante, é melhor prevenir do que remediar, mas não há problema em fazer os dois.<br></i>
+        -Análise (Combate: faz uma única Previsão contra dois alvos)<br>
+        <i>Analisar comportamentos sempre fez parte do trabalho de um detetive.<br></i>
+        <strong>Superpoder:</strong><br>
+        -Cidade em Vigia (Planejamento: Todos os Supers inimigos anunciam
+        primeiro durante Combate)<br>
+        <i>"Eu quero uma câmera ali, e uma ali. Apenas faça; eu sei o que estou fazendo."<br></i>
+    </p>
+
+    <h3>Trovão</h3>
+    <p class="super">
+        0P inicial.<br>
+        1 Combate, 6 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Defensor [I] (+1 Combate em Local Heróico)<br>
+        <i>Usando seu dom, Trovão se tornou herói unicamente para defender os fracos e indefesos.<br></i>
+        <strong>Ideais:</strong><br>
+        -Heroísmo (+1 Bravado em Local Heróico)<br>
+        <i>
+            Um herói se torna duas vezes mais forte quando luta por sua vida, mas se torna cem vezes
+            mais forte quando luta pela vida de outros. <br>
+        </i>
+        -Equipe (+1 Combate em 2v2)<br>
+        <i>Diferente dos vilões, os heróis nutrem laços uns pelos outros. Ninguém demonstrou mais lealdade do que Trovão em sua luta.<br></i>
+        -Estóico (cura 1 Ferimento de si)<br>
+        <i>Trovão precisa ser muito mais forte que apenas um Super comum para proteger aquilo que valoriza.<br></i>
+        <strong>Poderes:</strong><br>
+        -Resistência (Combate: todos os ataques inimigos nesta rodada são
+        redirecionados para Trovão. Não gasta Ação)<br>
+        <i>"Ninguém precisou mais de força do que Trovão naquele dia. Ele enfrentou a maior luta dentre todos nós, e arcou com as consequências..."<br></i>
+        -Relâmpago (Planejamento: escolhe dois Locais. Pode escolher em
+        qual Local vai ir depois de todos revelarem seus Locais)<br>
+        <i>"O quê? Ele está aqui? Seu maldito, você disse que ele estava com você!" Caótico reclamou ao rádio.<br></i>
+        -Superforça (Combate: +1 Combate ou +1 Bravado)<br>
+        <i>Não basta resistência para lutar. É necessário força para esmagar qualquer ameaça ao bem.<br></i>
+        -Protetor (Combate: Defesa imune a Previsão)<br>
+        <i>Se não fosse por Trovão, Ahkan não estaria apenas aleijado após a luta com Thri Fut... ele nunca mais seria visto.<br></i>
+        <strong>Superpoder:</strong><br>
+        Herói Invicto (Planejamento: +2 Bravado, defende dois locais ao
+        mesmo tempo)<br>
+        <i>Trovão seria capaz de qualquer coisa para impedir que os Vilões vencessem; inclusive lutar duas vezes.<br></i>
+    </p>
+
+    <h3>Luminosa</h3>
+    <p class="super">
+        4P inicial.<br>
+        0 Combate, 5 Bravado, 1 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Suporte [I] (+1 Bravado para aliados juntos da Luminosa)<br>
+        <i>"Não vou mentir: ela é quase nosso suporte de vida quando estamos lutando ao seu lado!"<br></i>
+        <strong>Ideais:</strong><br>
+        -Apoio (+1 Combate para um aliado no mesmo Local)<br>
+        <i>Luminosa não faz muito sozinha, mas qualquer guerreiro ao seu lado conta como dois. <br></i>
+        -Cura (Cura 1 ferimento de qualquer Super)<br>
+        <i>A experiência médica de Luminosa era tão grande que a garantiu uma vaga entre os heróis Classe A.<br></i>
+        -Evolução (+2P para um aliado, se ele vencer)<br>
+        <i>O espírito otimista da heroína sempre aumentou o astral do time e trouxe ares de esperança a Autropolis.<br></i>
+        <strong>Poderes:</strong><br>
+        -Protetora (Combate: Defesa imune a Previsão)<br>
+        <i>Assim como Trovão, Luminosa sempre prezou muito por seus companheiros. De fato, ambos já tiveram um romance no passadp.<br></i>
+        -Vitalidade (Combate: -4 Bravado, cura 1 Ferimento de um aliado neste Local. Não gasta Ação)<br>
+        <i>O ato mais honroso para um herói é se sacrificar pelo bem de outrém.<br></i>
+        -Médica (Planejamento: +2 Combate quando no Hospital)<br>
+        <i>O conhecimento do terreno pode levar a uma vantagem até mesmo maior do que o poder de combate.<br></i>
+        -Guarda (Planejamento: +1 Bravado em defesa de Missão)<br>
+        <i>A missão de um médico é impedir a morte de seus pacientes a todo custo. <br></i>
+        <strong>Superpoder:</strong><br>
+        Segunda Chance (Planejamento: Revive um aliado com 2 Ferimentos e 4HP)<br>
+        <i>
+            Depois de sua falha em salvar a filha do Pacificador da morte iminente,
+            Luminosa prometeu a si mesma que só voltaria às ruas após aprimorar suas capacidades médicas. Ela conseguiu.<br>
+        </i>
+    </p>
+
+    <h3>Mística</h3>
+    <p class="super">
+        2P inicial.<br>
+        1 Combate, 4 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Karma [I] (+1 Combate em Local Neutro)<br>
+        <i>"Tudo que vai, um dia volta." Ninguém suspeitou que ela estava sendo literal.<br></i>
+        <strong>Ideais:</strong><br>
+        -Aura (Troca Desastre para Nada no início da Fase de Planejamento. Dura apenas este turno)<br>
+        <i>"Olha aqui, a energia que emana de todos nós - não consegue sentir?"<br></i>
+        -Fantasma (Converte local Vilanesco para Neutro no início da Fase de Planejamento)<br>
+        <i>Depois que Mística sacrificou seu Olho, Thri Fut desapareceu como um fantasma. Ela negou tê-lo derrotado.<br></i>
+        -Dominância (+1 Combate em Local Heróico)<br>
+        <i>Com a maioria dos heróis morta ou derrotada, Mística teve que aprender a lutar sozinha.<br></i>
+        <strong>Poderes:</strong><br>
+        -Portal (Planejamento: Troca dois Locais - Supers que foram em um,
+        vão em outro)<br>
+        <i>Mística aprendeu esse truque de uma antiga amiga que conheceu por acaso, chamada Lupus.<br></i>
+        -Mentes Fracas (Planejamento: +1 Combate quando no Governo)<br>
+        <i> Espiritualistas como ela sempre se aproveitaram da corrupção humana. Ela, no entanto, faz isso com um bom propósito.<br></i>
+        -Possessão (Planejamento: NPC [0/3/2] Independente em Local-Alvo Neutro)<br>
+        <i>Mística não é fraca, mas também não é a mais forte em combate direto. Para isso, ela desenvolveu suas marionetes.<br></i>
+        -Vidência (Combate: um inimigo torna-se imune a Previsão, mas precisa revelar sua Ação. Não gasta Ação)<br>
+        <i>De fato, Mística podia prever o futuro... mas isso era apenas um efeito colateral de sua habilidade mais poderosa. <br></i>
+        <strong>Superpoder:</strong><br>
+        Espíritos do Submundo (Planejamento: converte 3 Locais no início da Fase de Combate)<br>
+        <i>"As almas daqueles que foram massacrados pelos vilões hoje erguem-se em busca de vingança."<br></i>
+    </p>
+
+    <h3>Ahkan</h3>
+    <p class="super">
+        2P inicial.<br>
+        1 Combate, 4 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Oferenda [I] (+1P a cada inimigo que cair em Armadilha ou Cilada. Recebe no início da Fase de Combate)<br>
+        <i>Em rituais da tribo Ahkan, aquele que captura a melhor presa é digno de receber as maiores honrarias.<br></i>
+        <strong>Ideais:</strong><br>
+        -Armadilha (-1 Combate aos inimigos em Local-Alvo)<br>
+        <i>Uma tática desonrosa aos olhos de guerreiros como o Espadachim, mas muito eficiente.<br></i>
+        -Agilidade (Fugas ocorrem antes de Ataques, se feitas no primeiro turno)<br>
+        <i>Para Ahkan, o guerreiro ideal sabe quando pode vencer uma luta - e quando é hora de recuar.<br></i>
+        -Ousadia (+1 Reflexos)<br>
+        <i>A coragem de Ahkan nunca falhou, nem mesmo no fatídico dia em que se sacrificou pelo bem de todos.<br></i>
+        <strong>Poderes:</strong><br>
+        -Veneno (Combate: faz Ataque que causa 2 ferimentos se acertado)<br>
+        <i>As toxinas das plantas indígenas de Ahkan destroem o sistema nervoso periférico e colapsam o central.<br></i>
+        -Contra-Ataque (Combate: Previsão que causa 1 Ferimento se acertada)<br>
+        <i>Ahkan e Manawa sempre tentam provar seu poder físico um ao outro por meio de lutas de suas tribos.<br></i>
+        -Cilada (Planejamento: -1 Bravado aos inimigos em Local-Alvo)<br>
+        <i>Uma técnica muito usada como meio de matar animais super resistentes como javalis.<br></i>
+        -Esquiva (Combate: toma uma Ação defensiva imune a Previsão)<br>
+        <i>Lutando contra outros indígenas, Ahkan aprendeu a se esquivar para evitar o veneno de suas armas.<br></i>
+        <strong>Superpoder:</strong><br>
+        Emboscada Tribal (Planejamento: Todos os inimigos em um
+        local levam 1 Ferimento de imediato)<br>
+        <i>Originalmente construída para derrotar tribos inimigas, essa técnica tem uso especial contra os vilões em Autrópolis. <br></i>
+    </p>
+
+    <h3>Manawa</h3>
+    <p class="super">
+        0P inicial.<br>
+        1 Combate, 6 Bravado, 0 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Regeneração [l] (Recuperação cura 2 Ferimentos)<br>
+        <i>Não se sabe se é um dom divino ou apenas enorme vigor físico, mas a cura de Manawa o acompanha desde a infância. <br></i>
+        -Tatuagens [l] (Glória causa -2 Bravado ao invés de -4)<br>
+        <i>Símbolos de força e poder, as tatuagens Maori conferem ao herói uma aparência bem distinta.<br></i>
+        <strong>Ideais:</strong><br>
+        -Maori (Cura 1 Ferimento de si)<br>
+        <i> A tribo Maori possui métodos ocultos, mas muito eficientes, de automedicina.<br></i>
+        -Auditivo (Ataque e Defesa são imunes à Previsão)<br>
+        <i>Poucos sabem, mas Manawa é cego. A verdade é que ele não precisa ver o mal para distinguí-lo.<br></i>
+        -Semideus (+1 Bravado)<br>
+        <i>Uma das poucas coisas que Ahkan admira em Manawa é sua incomparável resistência física.<br></i>
+        <strong>Poderes:</strong><br>
+        -Desarme (Combate: -1 Combate para Super-Alvo)<br>
+        <i>Uma das técnicas mais úteis em combates urbanos.<br></i>
+        -Gancho de Esquerda (Combate: Ataque que causa 2 Ferimentos se acertado)<br>
+        <i>Esse poderoso golpe pôde facilmente destruir os mega robôs de Dr. M no passado.<br></i>
+        -Persistência (Combate: Cura 1 Ferimento de si)<br>
+        <i>Não é apenas o corpo de Manawa que é quase indestrutível; sua vontade também é de ferro.<br></i>
+        -Arremesso (Combate: Ataque com -1 Combate; se acertar, move algum Super para outra área de sua escolha)<br>
+        <i>"O que diabos? Ele te ARREMESSOU do banco até o hospital?"<br></i>
+        <strong>Superpoder:</strong><br>
+        Por Maui (Planejamento: +1 Ação para cada inimigo no Combate, neste turno)<br>
+        <i>O amor por sua terra e seu povo fez Manawa enfrentar dezenas de inimigos de uma vez só no passado. Agora, ele compartilha esse amor por Autrópolis também.<br></i>
+    </p>
+
+    <h3>Prateado</h3>
+    <p class="super">
+        2P inicial.<br>
+        2 Combate, 4 Bravado, 2 Reflexos.<br>
+        <strong>Passivas:</strong><br>
+        -Adrenalina [l] (+2 Reflexos contra 2 ou mais inimigos)<br>
+        <i>Se envolver em situações mais perigosas do que o necessário sempre fez parte de Prateado. <br></i>
+        <strong>Ideais:</strong><br>
+        -Instinto (+1 Reflexos)<br>
+        <i>Não fosse por sua velocidade, Prateado não teria escapado das chamas de Lucifer em seu embate.<br></i>
+        -Estilo (+1P temporário ao ser atacado e não ser ferido)<br>
+        <i> Ninguém são de consciência se diverte tanto assim com o perigo...<br></i>
+        -Prata (Defesa nega 2 Ferimentos)<br>
+        <i>"Aquele maldito escapou de novo. Ele aparece e some que nem uma droga de um raio!"<br></i>
+        <strong>Poderes:</strong><br>
+        -Sanguinária (Combate: Ataque que, se acertado, cura um Ferimento de si)<br>
+        <i>Essa foice demoníaca se ligou ao herói devido ao seu sangue, e agora o serve.<br></i>
+        -Demoníaco (Combate: tem +1 Combate e Bravado durante a próxima rodada. Não gasta Ação)<br>
+        <i>Quando ativa esse poder, as origens de Prateado ficam claras; ele é um parente próximo dos demônios.<br></i>
+        -Recuo (Combate: Fuga que ocorre antes de Ataques)<br>
+        <i>Com um icônico dedo do meio, Prateado sai de cena com estilo.<br></i>
+        -Provocação (Combate: -1 Combate para o alvo. Não gasta Ação)<br>
+        <i>"Estão fingindo que estão atacando, é? A briga já começou! Lutem de verdade!"<br></i>
+        <strong>Superpoder:</strong><br>
+        Imortal (Passivo: Caso seja Arruinado e tenha 5P, gasta 5P e Prateado volta no próximo turno com 2 Ferimentos)<br>
+        <i>O inferno rejeita a alma de Prateado desde que ele derrotou seu rei.<br></i>
+    </p>
+
+</div>
+
+        {% endblock %}
