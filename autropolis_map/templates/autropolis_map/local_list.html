@@ -43,7 +43,13 @@
             {{ local.nome }}: {{local.desastre}} ({{ local.territorio }})
         </strong>
     {% for visitor in local.visitors.all %}
-    <br>-{{ visitor.nome }}
+        {% if visitor.team == 'H' %}
+        <br><span class="heroi">-{{ visitor.nome }}</span>
+        {% elif visitor.team == 'N' %}
+        <br><span class="neutro">-{{ visitor.nome }}</span>
+        {% else %}
+        <br><span class="vilao">-{{ visitor.nome }}</span>
+        {% endif %}
     {% endfor %}
     </p>
     {% endfor %}

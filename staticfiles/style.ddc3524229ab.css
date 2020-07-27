@@ -173,6 +173,17 @@ strong {
     font-size: 15px;
 }
 
+span.heroi {
+    color: deepskyblue;
+}
+
+span.neutro {
+    color: dimgray;
+}
+span.vilao {
+    color: darkred;
+}
+
 /* gallery section -------------------- */
 
 .gallery {

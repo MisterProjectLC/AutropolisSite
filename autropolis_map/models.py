@@ -32,7 +32,7 @@ class Super(models.Model):
         return self.nome
 
     class Meta:
-        ordering = ['nome']
+        ordering = ['team', 'nome']
     
 
 
