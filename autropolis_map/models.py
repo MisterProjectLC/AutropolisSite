@@ -30,6 +30,12 @@ class Game(models.Model):
 
 class Super(models.Model):
     nome = models.CharField(max_length=100,)
+    prestigio = models.IntegerField(default=0)
+    ferimentos = models.IntegerField(default=0)
+    saude = models.IntegerField(default=4)
+    combate = models.IntegerField(default=1)
+    bravado = models.IntegerField(default=4)
+    reflexos = models.IntegerField(default=1)
 
     TEAMS = (
         ('H', 'Heroico'),
