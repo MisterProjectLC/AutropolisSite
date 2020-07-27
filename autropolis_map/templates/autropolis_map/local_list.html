@@ -36,13 +36,16 @@
 
 {% if local_list %}
 <div class="wrap">
+    <p>Fase: {{local_list.1.game.fase}}</p>
+
     {% for local in local_list %}
 
     <p>
         <strong>
             {{ local.nome }}: {{local.desastre}} ({{ local.territorio }})
         </strong>
-    {% for visitor in local.visitors.all %}
+        {% if local.game.fase == 'Realocação' or  local.game.fase == 'Combate' or local.game.fase == 'Resolução' %}
+        {% for visitor in local.visitors.all %}
         {% if visitor.team == 'H' %}
         <br><span class="heroi">-{{ visitor.nome }}</span>
         {% elif visitor.team == 'N' %}
@@ -50,7 +53,8 @@
         {% else %}
         <br><span class="vilao">-{{ visitor.nome }}</span>
         {% endif %}
-    {% endfor %}
+        {% endfor %}
+        {% endif %}
     </p>
     {% endfor %}
 </div>

@@ -7,6 +7,20 @@ class Game(models.Model):
     turno = models.IntegerField(default=1)
     engenhocas = models.IntegerField(default=0)
 
+    FASES = (
+        ('Preparação','Preparação'),
+        ('Planejamento', 'Planejamento'),
+        ('Realocação', 'Realocação'),
+        ('Combate', 'Combate'),
+        ('Resolução', 'Resolução'),
+    )
+
+    fase = models.CharField(
+        default='Preparação',
+        max_length=100,
+        choices=FASES,
+    )
+
     def __str__(self):
         return "Autrópolis " + str(self.id)
 
