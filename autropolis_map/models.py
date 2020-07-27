@@ -39,6 +39,7 @@ class Super(models.Model):
 class Local(models.Model):
     nome = models.CharField(max_length=100,)
     especial = models.CharField(max_length=200, default='', blank=True)
+    overrider = models.CharField(max_length=200, default='', blank=True)
     heroico = models.CharField(max_length=200, default='Nada')
     neutro = models.CharField(max_length=200,)
     vilanesco = models.CharField(max_length=200,)
@@ -61,6 +62,9 @@ class Local(models.Model):
     def desastre(self):
         if self.especial != '':
             return self.especial
+
+        if self.overrider != '':
+            return self.overrider
         
         if self.territorio == 'H':
             return self.heroico
