@@ -44,7 +44,14 @@
 
     <p>
         <strong>
-            {{ local.nome }}: {{local.desastre}} ({{ local.territorio }})
+            {% if local.territorio == 'H' %}
+            <span class="heroi">{{ local.nome }}: </span>
+            {% elif local.territorio == 'N' %}
+            <span class="neutro">{{ local.nome }}: </span>
+            {% else %}
+            <span class="vilao">{{ local.nome }}: </span>
+            {% endif %}
+            {{local.desastre}}
         </strong>
         {% if local.game.fase == 'Realocação' or  local.game.fase == 'Combate' or local.game.fase == 'Resolução' %}
         {% for visitor in local.visitors.all %}
