@@ -51,7 +51,7 @@
             {% else %}
             <span class="vilao">{{ local.nome }}: </span>
             {% endif %}
-            {{local.desastre}}
+            {{local.desastre}} ({{local.territorio}})
         </strong>
         {% if local.game.fase == 'Realocação' or  local.game.fase == 'Combate' or local.game.fase == 'Resolução' %}
         {% for visitor in local.visitors.all %}
