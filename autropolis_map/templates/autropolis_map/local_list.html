@@ -36,6 +36,8 @@
 
 {% if local_list %}
 <div class="wrap">
+    <p>Turno: {{local_list.1.game.turno}}</p>
+    <p>Engenhocas: {{local_list.1.game.engenhocas}}</p>
     <p>Fase: {{local_list.1.game.fase}}</p>
 
     {% for local in local_list %}
